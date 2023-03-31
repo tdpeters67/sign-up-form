@@ -1,0 +1,31 @@
+body{
+    font-family: 'MedievalSharp', cursive;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background-color: white;
+}
+
+.picture{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    background: url(images/photo-1586283970632-8264074606be.avif) no-repeat center;
+    background-size: cover;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.picture-description{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: white;
+    font-size: .5rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
