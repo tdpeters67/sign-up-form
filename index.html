@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regneration Registration</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css"
+    <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="picture">
@@ -24,40 +24,69 @@
         <div class="form-info">
             <h1>This is not a real online service! You know you need something like this ni your life to help you realize your deepst dreams. Sign up now to get started. <br><br> You know you want to.</h1>
         </div>
-        <form action="*">
-            <h1>Let's do this!</h1>
+        <form action="">
+            <fieldset>
+                <legend>Let's do this! <br><br><br></legend>
+
             <div class="inputs">
-                <div class="first-name">
-                    <label for="first-name" class="form-label">First Name</label>
-                    <input type="text" id="first-name" class="form-input" placeholder="First Name" required>
+                <div class="left-side">
+                    <div class="first-name">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" id="first-name" class="form-input" placeholder="John" >
+                    </div>
+                    <div class="email">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Example@email.com" >
+                    </div>
+                    <div class="password">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="*************" >
+                    </div>
                 </div>
+                <div class="right-side">
                 <div class="last-name">
                     <label for="last-name" class="form-label">Last Name</label>
-                    <input type="text" id="last-name" class="form-input" placeholder="Last Name" required>
+                    <input type="text" id="last-name" class="form-input" placeholder="Doe" >
                 </div>
-                <div class="email">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-input" placeholder="Example@email.com" required>
-                </div>
+                
                 <div class="phone number">
                     <label for="phone-number" class="form-label">Phone Number</label>
-                    <input type="number" id="phone-number" class="form-input" placeholder="(555)555-5555" required>
+                    <input type="tel" id="phone-number" class="form-input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter a valid phone number, example: 555-555-5555" placeholder="555-555-5555" >
                 </div>
-                <div class="password">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="text" id="password" class="form-input" placeholder="*************" required>
-                </div>
+                
                 <div class="confirm-password">
                     <label for="confirm-password" class="form-label">Confirm Password</label>
-                    <input type="text" id="confirm-password" class="form-input" placeholder="*************" required>
+                    <input type="password" id="confirm-password" class="form-input" placeholder="*************" >
                 </div>
             </div>
+            </div>
+        </fieldset>
+        
             <div class="form-end">
-                <div class="errorMessage"></div>
-                <button class="btn" type="submit">Create Account!</button>
-                <h1>Already have an account? <a href="" class="login">Log in!</a></h1>
+                <div class="errorMessage">test</div>
+                <div class='btn'><button class="btn" type="submit">Create Account!</button></div>
+                <div class='returning-user'><h1>Already have an account? <a href="" class="login">Log in!</a></h1></div>
             </div>
         </form>
     </div>
+    <script>
+
+        const password = document.querySelector("#password");
+        const confirmPassword = document.querySelector('#confirm-password')
+        const errorMessage = document.querySelector('.errorMessage')
+
+        const submit = (e) => {
+            e.preventDefault();
+            password.classList.add('error')
+            confirmPassword.classList.add('error')
+            errorMessage.textContent = 'Passwords do not match'
+            return;
+        }
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', submit);
+
+       
+    </script>
 </body>
 </html>

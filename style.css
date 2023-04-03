@@ -29,3 +29,120 @@ a{
     text-decoration: inherit;
 }
 
+.form-info{
+    padding-bottom: 75px;
+    padding-top: 100px;
+}
+
+.form-label{
+    transition: all 0.5s;
+    transform: translateY(-3.4rem);
+}
+
+.form-end{
+    padding-bottom: 50px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.login{
+    color: rgb(44, 111, 44)
+}
+
+.form-input{
+    border: 2px solid black;
+    color: #333;
+    font-size: 1.2rem;
+    padding: .2rem .2rem;
+    border-radius: .2rem;
+    transition: all .5s;
+    margin-top: 5%;
+    padding-right: 10%;
+}
+.form-input:focus{
+    transform: .2s;
+    outline: none;
+    border: 2px solid blue;
+}
+
+.form{
+    width: 60%;
+    font-size: 20px;
+    margin-top: 5%;
+    font-family: 'Medieval Sharp', cursive;
+    
+}
+
+.form > * {
+    padding-left: 10%;
+    padding-right: 10%;
+   
+}
+
+fieldset{
+    height: 35%;
+    width: 80%;
+    background-color: rgb(221, 219, 219);
+    display: flex;
+    align-items: center;
+    
+}
+
+fieldset > .left-side + .right-side{
+    display: flex;
+    
+}
+
+.inputs{
+    width: 10%;
+    display: flex;
+    gap: 50px;
+    
+
+}
+
+.inputs > *{
+    display: flex;
+}
+
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 15px 30px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+button{
+    background: rgb(44, 111, 44);
+    color: white;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input{
+    border: #E5E7EB;
+}
+input:invalid{
+    border-color: red;
+}
+
+.errorMessage{
+    color:red
+}
